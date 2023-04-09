@@ -3,7 +3,7 @@
 1. Clone the Template
 
 ```bash
-$ git clone https://github.com/Saif807380/fastapi-starter-template
+$ git clone https://github.com/NeerajGartia21/ERP.git
 ```
 
 2. Create a `virtual environment` and install the requirements

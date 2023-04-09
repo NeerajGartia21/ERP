@@ -17,7 +17,7 @@ router = APIRouter(
 
 @router.post("/login", status_code=status.HTTP_200_OK, response_model=Token)
 def login(id: str = Body(...), password: str = Body(...), db: Session = Depends(get_db)):
-    user = Student.get_user_by_(id, db)
+    user = Student.get_student_by_id(id, db)
     if not user:
         raise user_not_found_exception
     if not verify_password(password, user.password):
