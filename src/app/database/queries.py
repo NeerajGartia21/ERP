@@ -6,24 +6,34 @@ from . import models, schemas
 from helpers.auth import get_password_hash
 from exceptions.user import user_already_exists_exception
 
-class User:
+class Student:
 
     @staticmethod
-    def get_user_by_id(id: int, db: Session):
-        return db.query(models.User).filter(models.User.id == id).first()
+    def get_student_by_id(id: int, db: Session):
+        return db.query(models.Student).filter(models.Student.id == id).first()
 
     @staticmethod
-    def get_user_by_email(email: str, db: Session):
-        return db.query(models.User).filter(models.User.email == email).first()
+    def get_student_by_email(email: str, db: Session):
+        return db.query(models.Student).filter(models.Student.email == email).first()
+
+class Course:
 
     @staticmethod
-    def create_user(user: schemas.UserBase, db: Session):
-        try:
-            user.password = get_password_hash(user.password)
-            db_user = models.User(**user.dict())
-            db.add(db_user)
-            db.commit()
-            db.refresh(db_user)
-            return db_user
-        except IntegrityError:
-            raise user_already_exists_exception
+    def get_courses_by_department(id: int, db: Session):
+        return db.query(models.Course).filter(models.Course.department_id == id)
+
+    @staticmethod
+    def get_courses_by_faculty(id: int, db: Session):
+        return db.query(models.Course).filter(models.Course.faculty_id == id)
+    
+
+class CourseEnrolled:
+    
+    @staticmethod
+    def get_enrollment_by_student(id: int, db: Session):
+        return db.query(models.CourseEnrolled).filter(models.CourseEnrolled.student_id == id)
+
+    @staticmethod
+    def get_enrollment_by_course(id: int, db: Session):
+        return db.query(models.Course).filter(models.Course.faculty_id == id)
+    

@@ -1,45 +1,3 @@
-![Auto Generated Docs](https://github.com/Saif807380/fastapi-starter-template/blob/main/images/Screenshot%202021-01-23%20at%2022.25.36.png)
-
-# FastAPI Starter Template
-
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-sucess.svg)](https://gitHub.com/preprocessy/preprocessy/graphs/commit-activity)
-[![Issues Open](https://img.shields.io/github/issues/Saif807380/fastapi-starter-template)](https://github.com/Saif807380/fastapi-starter-template/issues)
-[![Forks](https://img.shields.io/github/forks/Saif807380/fastapi-starter-template)](https://github.com/Saif807380/fastapi-starter-template/network/members)
-[![Stars](https://img.shields.io/github/stars/Saif807380/fastapi-starter-template)](https://github.com/Saif807380/fastapi-starter-template/stargazers)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](https://github.com/Saif807380/fastapi-starter-template/issues)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
-An opinionated template that will help you get quickly setup with a FastAPI backend with minimal configuration.
-
-## Features
-
-- A dedicated folder structure for supporting big projects
-
-- Boilerplate code for user authentication
-
-- Minimal Database configuration using `SQLAlchemy` which supports many databases
-
-- `JWT` and `CORS` middleware configured out of the box
-
-- Testing environment using `pytest`
-
-## Requirements
-
-```
-bcrypt
-fastapi
-passlib
-pydantic
-python-dotenv
-python-jose
-python-multipart
-SQLAlchemy
-starlette
-uvicorn
-```
-
-For development requirements see [Contributing Guidelines](https://github.com/Saif807380/fastapi-starter-template/blob/main/CONTRIBUTING.md)
-
 ## Quick Setup
 
 1. Clone the Template
@@ -166,15 +124,3 @@ See this for a list of [supported encoding algorithms](https://python-jose.readt
 ### Helpers
 
 You can add your helper functions to `helpers` directory.
-
-## Contributing
-
-Please read the [Contributing Guide](https://github.com/Saif807380/fastapi-starter-template/blob/main/CONTRIBUTING.md) before submitting a Pull Request to the project.
-
-## Support
-
-Feel free to [contact me](https://www.saif-kazi.tech). I'm happy to help!
-
-## License
-
-See the [LICENSE](https://github.com/Saif807380/fastapi-starter-template/blob/main/LICENSE) file for licensing information.
